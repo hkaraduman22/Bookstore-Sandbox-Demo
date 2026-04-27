@@ -18,27 +18,17 @@ public class BooksController : ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetAllBooks()
     {
-        // await ekledik: Veritabanından veriler gelene kadar beklemesini sağladık.
-        var items = await _bookService.GetAllBooksAsync();
+        // İŞTE BURASI: İçine false eklenmeliydi
+        var items = await _bookService.GetAllBooksAsync(false);
         return Ok(items);
     }
 
     [HttpPost]
-    public async Task<IActionResult> CreateOneBook([FromBody] Book book)
+    public async Task<IActionResult> CreateOneBook([FromBody] Book book) // Task ve async eklendi
     {
-        if (book == null)
-            return BadRequest(new { message = "Gelen veri boş!" });
+        if (book == null) return BadRequest();
 
-        try
-        {
-            // await ekledik: SaveAsync işleminin bitmesini bekliyoruz.
-            // Metot isminin CreateOneBookAsync olduğundan emin ol (Servis katmanında öyle yaptık).
-            var result = await _bookService.CreateOneBookAsync(book);
-            return StatusCode(201, result);
-        }
-        catch (Exception ex)
-        {
-            return StatusCode(500, new { message = ex.Message });
-        }
+        var result = await _bookService.CreateOneBookAsync(book); // await kullanıldı
+        return StatusCode(201, result);
     }
 }

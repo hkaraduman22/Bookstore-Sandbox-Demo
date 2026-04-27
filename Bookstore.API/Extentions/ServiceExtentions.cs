@@ -8,11 +8,10 @@ namespace Bookstore.API.Extentions
 {
     public static class ServiceExtentions
     {
-        public static void ConfigureSqlContext(this IServiceCollection services, IConfiguration configuration)
-        {
-            services.AddDbContext<AppDbContext>(options =>
-                options.UseSqlite("Data Source=bookstore.db"));
-        }
+        public static void ConfigureSqlContext(this IServiceCollection services, IConfiguration configuration) =>
+     services.AddDbContext<AppDbContext>(opts =>
+         opts.UseSqlite(configuration.GetConnectionString("sqlConnection")));
+
 
         public static void ConfigureBookService(this IServiceCollection services)
         {

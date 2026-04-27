@@ -1,11 +1,17 @@
-﻿using Bookstore.Repositories;
+﻿namespace Bookstore.Repositories;
 
 public class RepositoryManager : IRepositoryManager
 {
-    public IBookRepository Book => throw new NotImplementedException();
+    private readonly AppDbContext _context;
+    private readonly Lazy<IBookRepository> _bookRepository;
 
-    public Task SaveAsync()
+    public RepositoryManager(AppDbContext context)
     {
-        throw new NotImplementedException();
+        _context = context;
+        _bookRepository = new Lazy<IBookRepository>(() => new BookRepository(context));
     }
+
+    public IBookRepository Book => _bookRepository.Value;
+
+    public async Task SaveAsync() => await _context.SaveChangesAsync(); // NotImplementedException kaldırıldı
 }
