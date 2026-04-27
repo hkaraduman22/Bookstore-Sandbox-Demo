@@ -1,0 +1,13 @@
+## Visual Studio özel dosyaları
+.vs/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.db
+
+## VS Code dosyaları
+.vscode/
+
+## .NET geçici dosyaları
+*.sln.dotsettings.user

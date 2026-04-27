@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Bookstore.API/Bookstore.API.csproj" />
+  <Project Path="Bookstore.Entities/Bookstore.Entities.csproj" />
+  <Project Path="Bookstore.Presentation/Bookstore.Presentation.csproj" Id="bd5f013a-2092-4d6c-ba6b-9ca422baf511" />
+  <Project Path="Bookstore.Repositories/Bookstore.Repositories.csproj" />
+  <Project Path="Bookstore.Services/Bookstore.Services.csproj" />
+</Solution>
