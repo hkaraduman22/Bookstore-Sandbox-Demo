@@ -1,30 +1,25 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Bookstore.Services;  
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Bookstore.Services;
 
 namespace Bookstore.Presentation.Controllers;
 
+[Authorize(Roles = "ADMIN")]
 [ApiController]
-[Route("/system")]
+[Route("api/system")]
 public class SystemController : ControllerBase
 {
-    private readonly IDemoService _demoService;  
+    private readonly IDemoService _demoService;
 
-    public SystemController(IDemoService demoService)  
+    public SystemController(IDemoService demoService)
     {
         _demoService = demoService;
     }
 
-    [HttpPost("reset")]
-    public async Task<IActionResult> Reset()
+    [HttpPost("restore")]
+    public async Task<IActionResult> Restore()
     {
         await _demoService.ResetSystemToDemoAsync();
-        return Ok(new { message = "Sistem temizlendi ve demo verileri yüklendi." });
-    }
-
-    [HttpPost("chaos")]
-    public async Task<IActionResult> Chaos([FromQuery] int count = 50)
-    {
-        await _demoService.CreateTestingChaosAsync(count);
-        return Ok(new { message = $"{count} adet rastgele bozuk veri eklendi." });
+        return Ok();
     }
 }
