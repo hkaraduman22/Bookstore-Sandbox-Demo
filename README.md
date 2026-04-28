@@ -1,10 +1,16 @@
 ﻿### 📚 Bookstore Management System (Full-Stack)
 ---
-Bu proje, modern yazılım geliştirme prensipleri olan Katmanlı Mimari (Layered Architecture), Merkezi Hata Yönetimi, Yapılandırılmış Loglama (Structured Logging) ve Rol Tabanlı Erişim Kontrolü (RBAC) kullanılarak ASP.NET Core ve React ile geliştirilmiş kapsamlı bir Kitap Envanter Yönetim Sistemi'dir.
+Bu proje, online bir kitabevi satış platformu üzerinde; bozulmuş verileri temizleyerek sistemi düzgün verilerle tekrar kullanılabilir bir pazarlama demosuna hazır hale getiren özel bir mekanizma ile donatılmıştır. Katmanlı Mimari (Layered Architecture), Merkezi Hata Yönetimi ve Rol Tabanlı Erişim Kontrolü (RBAC) prensipleri kullanılarak ASP.NET Core ve React ile geliştirilmiştir.
 
 ### 🎯 Projenin Amacı ve Kazanımlar
 ---
-Bu proje, monolitik bir yapıyı modüler ve sürdürülebilir bir mimariye dönüştürme pratiği olarak tasarlanmıştır. Özellikle Dependency Injection, Entity Framework Core üzerinden ilişkisel veri yönetimi ve NLog ile custom log mekanizmaları üzerine yoğunlaşılmıştır.
+Bu çalışmanın temel odağı, bir online satış sitesinde oluşabilecek veri tutarsızlıklarını gidermek ve sistemi her an sunuma hazır tutmaktır.
+
+Pazarlama Demosu Hazırlığı: Sistemde bulunan "Admin Reset" mekanizması (gizli bir yönetici düğmesi) tetiklendiğinde, bozulmuş veya test amaçlı girilmiş hatalı veriler temizlenir; veritabanı önceden tanımlanmış "Golden State" (ideal veri seti) durumuna geri döndürülür.
+
+Sistem Sınama: İsteğe bağlı olarak sisteme rastgele veriler eklenerek mimarinin yük ve veri geçerliliği altındaki davranışı test edilebilmektedir.
+
+Teknik Odak: Projede Dependency Injection, Entity Framework Core ile ilişkisel veri yönetimi ve NLog ile yapılandırılmış loglama mekanizmalarına odaklanılmıştır.
 
 ## 🛠 Kullanılan Teknolojiler
 
