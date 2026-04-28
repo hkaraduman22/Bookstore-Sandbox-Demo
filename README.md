@@ -38,25 +38,30 @@ Node.js (v18+)
 Terminali açın ve Bookstore.API dizinine gidin:
 cd Bookstore.API
 Bağımlılıkları yükleyin:
+ ```bash
 dotnet restore
+```
 Projeyi çalıştırın:
+```bash
 dotnet run
-
+```
 Not: Uygulama ilk kez çalıştığında, DemoService devreye girerek bookstore.db SQLite veritabanını otomatik olarak oluşturur ve içine test kategorileri/kitapları (Seed Data) ekler. Ekstra bir migration komutu çalıştırmanıza gerek yoktur.
 
 2. Frontend'i Ayağa Kaldırma
 
 Yeni bir terminal penceresi açın ve Bookstore.Frontend dizinine gidin:
-
+```bash
 cd Bookstore.Frontend
+```
 
 NPM paketlerini yükleyin:
-
+```bash
 npm install
-
+```
 Geliştirme sunucusunu başlatın:
-
+```bash
 npm run dev
+```
 🔐 Kimlik Doğrulama ve Roller (RBAC)
 
 Sistemde yetkilendirme işlemleri Controller seviyesinde korunmaktadır ve 3 farklı rol bulunmaktadır:
