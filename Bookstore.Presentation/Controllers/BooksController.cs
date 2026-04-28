@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Bookstore.Entities;
+using Bookstore.Entities.DTOs;
 using Bookstore.Services;
-using Bookstore.Entities;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Bookstore.Presentation.Controllers;
 
@@ -24,11 +25,17 @@ public class BooksController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> CreateOneBook([FromBody] Book book) // Task ve async eklendi
+    public async Task<IActionResult> CreateOneBook([FromBody] Book book)
     {
-        if (book == null) return BadRequest();
+        // Gelen veriyi kontrol et: CategoryId 0 mı geliyor?
+        Console.WriteLine($"GELEN KİTAP: {book.Title}, KATEGORİ ID: {book.CategoryId}");
 
-        var result = await _bookService.CreateOneBookAsync(book); // await kullanıldı
+        if (book.CategoryId == 0)
+        {
+            return BadRequest("HATA: Kategori ID 0 olarak geldi. Frontend eksik veri gönderiyor.");
+        }
+
+        var result = await _bookService.CreateOneBookAsync(book);
         return StatusCode(201, result);
     }
 }

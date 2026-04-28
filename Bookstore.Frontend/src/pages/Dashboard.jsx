@@ -2,10 +2,10 @@
 import { useDemoReset } from "../hooks/useDemoReset";
 
 const Dashboard = ({ user, onLogout }) => {
-    // 1. State Tanımlamaları
-    const [books, setBooks] = useState([]); // Başlangıçta boş dizi
+    // 1. State Tanımlamaları (Kategori ID varsayılan olarak eklendi)
+    const [books, setBooks] = useState([]);
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [newBook, setNewBook] = useState({ title: '', author: '', price: 0 });
+    const [newBook, setNewBook] = useState({ title: '', author: '', price: 0, categoryId: 1 });
 
     // 2. Veri Çekme Fonksiyonu
     const fetchBooks = async () => {
@@ -15,11 +15,9 @@ const Dashboard = ({ user, onLogout }) => {
             });
             const data = await res.json();
 
-            // Hata koruması: Eğer gelen veri dizi değilse (hata mesajıysa vb.) boş dizi ata
             if (res.ok && Array.isArray(data)) {
                 setBooks(data);
             } else {
-                console.error("Backend dizi dönmedi:", data);
                 setBooks([]);
             }
         } catch (err) {
@@ -51,10 +49,13 @@ const Dashboard = ({ user, onLogout }) => {
 
             if (res.ok) {
                 setIsModalOpen(false);
-                setNewBook({ title: '', author: '', price: 0 });
+                // İşlem başarılıysa formu sıfırla (Kategori ID'yi koruyarak)
+                setNewBook({ title: '', author: '', price: 0, categoryId: 1 });
                 fetchBooks();
             } else {
-                alert("Kitap eklenemedi! Backend POST metodunu veya yetkinizi kontrol edin.");
+                const errorData = await res.text();
+                console.error("Backend Hatası:", errorData);
+                alert("Kitap eklenemedi! Backend'den dönen hata mesajı için konsolu (F12) kontrol edin.");
             }
         } catch (err) {
             alert("İstek gönderilirken hata oluştu.");
@@ -68,7 +69,6 @@ const Dashboard = ({ user, onLogout }) => {
             <div style={{ width: '260px', background: '#2d3748', color: 'white', padding: '30px', display: 'flex', flexDirection: 'column' }}>
                 <h2 style={{ fontSize: '20px', marginBottom: '10px' }}>📚 Bookstore</h2>
                 <div style={{ background: '#4a5568', padding: '10px', borderRadius: '5px', fontSize: '13px' }}>
-                    <strong>Kullanıcı:</strong> {user.username}<br />
                     <strong>Rol:</strong> {user.role}
                 </div>
                 <div style={{ flexGrow: 1 }}></div>
@@ -159,7 +159,7 @@ const Dashboard = ({ user, onLogout }) => {
                                     onChange={e => setNewBook({ ...newBook, author: e.target.value })}
                                 />
                             </div>
-                            <div style={{ marginBottom: '25px' }}>
+                            <div style={{ marginBottom: '15px' }}>
                                 <label style={{ display: 'block', marginBottom: '5px', fontSize: '14px', fontWeight: '600' }}>Fiyat (TL)</label>
                                 <input
                                     type="number"
@@ -169,6 +169,18 @@ const Dashboard = ({ user, onLogout }) => {
                                     onChange={e => setNewBook({ ...newBook, price: parseFloat(e.target.value) })}
                                 />
                             </div>
+                            <div style={{ marginBottom: '25px' }}>
+                                <label style={{ display: 'block', marginBottom: '5px', fontSize: '14px', fontWeight: '600' }}>Kategori ID</label>
+                                <input
+                                    type="number"
+                                    required
+                                    defaultValue={1}
+                                    style={{ width: '100%', padding: '10px', borderRadius: '6px', border: '1px solid #cbd5e0' }}
+                                    onChange={e => setNewBook({ ...newBook, categoryId: parseInt(e.target.value) })}
+                                />
+                                <small style={{ color: '#718096' }}>Geçerli bir kategori ID girin (Örn: 1 veya 2).</small>
+                            </div>
+
                             <div style={{ display: 'flex', gap: '10px' }}>
                                 <button
                                     type="button"

@@ -47,11 +47,24 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 
-// Veritabaný Baþlatma (Her seferinde silme iþlemini kaldýrdýk)
+// Veritabaný Baþlatma ve Otomatik Seed (Veri Ekleme) Ýþlemi
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+
+    // Veritabanýnýn ve tablolarýn var olduðundan emin ol
     dbContext.Database.EnsureCreated();
+
+    // Eðer veritabanýnda hiç kategori yoksa, DemoService ile baþlangýç verilerini yükle
+    if (!dbContext.Categories.Any())
+    {
+        var demoService = scope.ServiceProvider.GetRequiredService<IDemoService>();
+
+        // Asenkron metodu senkron bir blokta (Program.cs startup) çaðýrdýðýmýz için GetAwaiter().GetResult() kullanýyoruz.
+        demoService.ResetSystemToDemoAsync().GetAwaiter().GetResult();
+
+        Console.WriteLine("Veritabaný boþtu, baþlangýç kategorileri ve kitaplarý eklendi.");
+    }
 }
 
 app.Run();

@@ -13,5 +13,5 @@ public class RepositoryManager : IRepositoryManager
 
     public IBookRepository Book => _bookRepository.Value;
 
-    public async Task SaveAsync() => await _context.SaveChangesAsync(); // NotImplementedException kaldırıldı
+    public async Task SaveAsync() => await _context.SaveChangesAsync(); 
 }
