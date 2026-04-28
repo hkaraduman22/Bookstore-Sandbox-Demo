@@ -3,5 +3,5 @@
 public interface IDemoService
 {
     Task ResetSystemToDemoAsync();
-    Task CreateTestingChaosAsync(int count);
+    //Task CreateTestingChaosAsync(int count);
 }

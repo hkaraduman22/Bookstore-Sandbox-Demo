@@ -1,20 +1,22 @@
 using Bookstore.API.Extentions;
 using Bookstore.Repositories;
 using Bookstore.Services;
+using Bookstore.Services.Conctrats;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Servisler
+// SERVÝCES REGISTRATION
 builder.Services.ConfigureSqlContext(builder.Configuration);
 builder.Services.ConfigureBookService();
 builder.Services.ConfigureRepositoryManager();
 builder.Services.ConfigureServiceManager();
 builder.Services.ConfigureAuthentication();
+builder.Services.ConfigureLoggingService();
 
-// JWT Doðrulama (Anahtarý Eþitledik)
+// JWT Validation
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
     {
@@ -41,26 +43,25 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
+var logger = app.Services.GetRequiredService<ILoggingService>();
+
+
 // Middleware Sýralamasý
 app.UseCors("AllowReactApp");
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
-
-// Veritabaný Baþlatma ve Otomatik Seed (Veri Ekleme) Ýþlemi
+ 
 using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<AppDbContext>();
-
-    // Veritabanýnýn ve tablolarýn var olduðundan emin ol
+     
     dbContext.Database.EnsureCreated();
-
-    // Eðer veritabanýnda hiç kategori yoksa, DemoService ile baþlangýç verilerini yükle
+     
     if (!dbContext.Categories.Any())
     {
         var demoService = scope.ServiceProvider.GetRequiredService<IDemoService>();
-
-        // Asenkron metodu senkron bir blokta (Program.cs startup) çaðýrdýðýmýz için GetAwaiter().GetResult() kullanýyoruz.
+         
         demoService.ResetSystemToDemoAsync().GetAwaiter().GetResult();
 
         Console.WriteLine("Veritabaný boþtu, baþlangýç kategorileri ve kitaplarý eklendi.");

@@ -3,6 +3,8 @@ using Bookstore.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using Bookstore.Services.Conctrats;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 namespace Bookstore.API.Extentions
 {
@@ -27,11 +29,20 @@ namespace Bookstore.API.Extentions
         public static void ConfigureServiceManager(this IServiceCollection services)
         {
             services.AddScoped<IDemoService, DemoService>();
+            services.AddScoped<IserviceManager, ServiceManager>();
         }
 
         public static void ConfigureAuthentication(this IServiceCollection services)
         {
             services.AddScoped<AuthenticationService>();
         }
+
+        public static void ConfigureLoggingService(this IServiceCollection services)
+        {
+            services.AddSingleton<ILoggingService, LoggingManager>();
+        }
+
+         
     }
+
 }

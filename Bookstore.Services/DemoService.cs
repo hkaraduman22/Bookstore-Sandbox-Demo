@@ -1,31 +1,40 @@
 ﻿using Bookstore.Entities;
 using Bookstore.Repositories;
+using Bookstore.Services.Conctrats;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
 
 namespace Bookstore.Services;
 
 public class DemoService : IDemoService
 {
+
     private readonly AppDbContext _context;
 
-    public DemoService(AppDbContext context)
+    private readonly ILoggingService _logger;
+    public DemoService(AppDbContext context,ILoggingService logger)
     {
         _context = context;
+        _logger = logger;
     }
 
     public async Task ResetSystemToDemoAsync()
-    {
+    { 
         _context.Books.RemoveRange(_context.Books);
         _context.Categories.RemoveRange(_context.Categories);
         await _context.SaveChangesAsync();
+
+
+        //QUERY WİTHOUT LİNQ 
+        await _context.Database.ExecuteSqlRawAsync("DELETE FROM sqlite_sequence WHERE name='Categories';");
+        await _context.Database.ExecuteSqlRawAsync("DELETE FROM sqlite_sequence WHERE name='Books';");
          
         var catYazilim = new Category { Name = "Yazılım & Teknoloji" };
         var catTarih = new Category { Name = "Tarih" };
         var catEdebiyat = new Category { Name = "Dünya Edebiyatı" };
 
         await _context.Categories.AddRangeAsync(catYazilim, catTarih, catEdebiyat);
-        await _context.SaveChangesAsync(); // Kategoriler ID alsın diye önce kaydediyoruz
-
+        await _context.SaveChangesAsync();  
          
         var demoBooks = new List<Book>
         {
@@ -35,33 +44,12 @@ public class DemoService : IDemoService
             new Book { Title = "1984", Author = "George Orwell", Price = 120.00m, CategoryId = catEdebiyat.Id },
             new Book { Title = "Suç ve Ceza", Author = "Dostoyevski", Price = 180.00m, CategoryId = catEdebiyat.Id }
         };
+        string message = "The system was restored to its default state!";
+        _logger.LogInfo(message);
 
         await _context.Books.AddRangeAsync(demoBooks);
         await _context.SaveChangesAsync();
     }
 
-    public async Task CreateTestingChaosAsync(int count)
-    {
-        // Rastgele kategori seçimi için var olan kategorileri çek
-        var categories = await _context.Categories.ToListAsync();
-        if (!categories.Any()) return; // Kategori yoksa kaos da yaratamayız
-
-        var random = new Random();
-        var chaosBooks = new List<Book>();
-
-        for (int i = 0; i < count; i++)
-        {
-            var randomCategory = categories[random.Next(categories.Count)];
-            chaosBooks.Add(new Book
-            {
-                Title = $"Bozuk Veri {Guid.NewGuid().ToString().Substring(0, 5)}",
-                Author = "Bilinmeyen Hacker",
-                Price = (decimal)(random.NextDouble() * 1000),
-                CategoryId = randomCategory.Id
-            });
-        }
-
-        await _context.Books.AddRangeAsync(chaosBooks);
-        await _context.SaveChangesAsync();
-    }
+   
 }

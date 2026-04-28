@@ -8,8 +8,7 @@ namespace Bookstore.Services;
 public class AuthenticationService
 {
     public string CreateToken(string username, string password)
-    {
-        // Rol Belirleme
+    { 
         string role = username.ToLower() switch
         {
             "admin" => "ADMIN",
@@ -21,8 +20,7 @@ public class AuthenticationService
             new Claim(ClaimTypes.Name, username),
             new Claim(ClaimTypes.Role, role)
         };
-
-        // ANAHTAR: Program.cs ile aynı olmalı
+         
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("HakanTarik_Cok_Gizli_Ve_Cok_Uzun_Anahtar_2026_!_"));
         var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 

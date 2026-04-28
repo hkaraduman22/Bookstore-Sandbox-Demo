@@ -1,0 +1,252 @@
+2026-04-28 14:35:04.0340 Info Loading assembly name: NLog.Web.AspNetCore
+2026-04-28 14:35:04.0432 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. Sistem belirtilen dosyayı bulamıyor.
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String itemNamePrefix)
+   --- End of inner exception stack trace ---
+2026-04-28 14:35:04.1128 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-04-28 14:35:04.1128 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 14:35:04.1128 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-mvc-action' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 14:35:04.1128 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2026-04-28 14:35:04.1128 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=lifetimeConsole)
+2026-04-28 14:35:04.1254 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.1.5033. Product version: 6.1.1+0e83056311dfcda0493d7db60b7191d0927eb5da. GlobalAssemblyCache: False
+2026-04-28 14:35:04.1421 Info Configuration initialized: TargetNames=allfile, ownFile-web, lifetimeConsole, ConfigItems=47, AutoReload=true, FilePath=C:\ASP.Net Core Web Api\YMODEVİ\Bookstore.API\nlog.config
+2026-04-28 14:35:40.3351 Info Loading assembly name: NLog.Web.AspNetCore
+2026-04-28 14:35:40.3431 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. Sistem belirtilen dosyayı bulamıyor.
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String itemNamePrefix)
+   --- End of inner exception stack trace ---
+2026-04-28 14:35:40.4030 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-04-28 14:35:40.4030 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 14:35:40.4030 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-mvc-action' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 14:35:40.4030 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2026-04-28 14:35:40.4030 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=lifetimeConsole)
+2026-04-28 14:35:40.4030 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.1.5033. Product version: 6.1.1+0e83056311dfcda0493d7db60b7191d0927eb5da. GlobalAssemblyCache: False
+2026-04-28 14:35:40.4361 Info Configuration initialized: TargetNames=allfile, ownFile-web, lifetimeConsole, ConfigItems=47, AutoReload=true, FilePath=C:\ASP.Net Core Web Api\YMODEVİ\Bookstore.API\nlog.config
+2026-04-28 14:36:53.0944 Info Loading assembly name: NLog.Web.AspNetCore
+2026-04-28 14:36:53.0944 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. Sistem belirtilen dosyayı bulamıyor.
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String itemNamePrefix)
+   --- End of inner exception stack trace ---
+2026-04-28 14:36:53.1672 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-04-28 14:36:53.1672 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 14:36:53.1672 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-mvc-action' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 14:36:53.1672 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2026-04-28 14:36:53.1672 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=lifetimeConsole)
+2026-04-28 14:36:53.1672 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.1.5033. Product version: 6.1.1+0e83056311dfcda0493d7db60b7191d0927eb5da. GlobalAssemblyCache: False
+2026-04-28 14:36:53.2053 Info Configuration initialized: TargetNames=allfile, ownFile-web, lifetimeConsole, ConfigItems=47, AutoReload=true, FilePath=C:\ASP.Net Core Web Api\YMODEVİ\Bookstore.API\nlog.config
+2026-04-28 14:38:33.3002 Info Loading assembly name: NLog.Web.AspNetCore
+2026-04-28 14:38:33.3070 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. Sistem belirtilen dosyayı bulamıyor.
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String itemNamePrefix)
+   --- End of inner exception stack trace ---
+2026-04-28 14:38:33.3617 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-04-28 14:38:33.3617 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 14:38:33.3617 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-mvc-action' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 14:38:33.3617 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2026-04-28 14:38:33.3617 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=lifetimeConsole)
+2026-04-28 14:38:33.3731 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.1.5033. Product version: 6.1.1+0e83056311dfcda0493d7db60b7191d0927eb5da. GlobalAssemblyCache: False
+2026-04-28 14:38:33.3880 Info Configuration initialized: TargetNames=allfile, ownFile-web, lifetimeConsole, ConfigItems=47, AutoReload=true, FilePath=C:\ASP.Net Core Web Api\YMODEVİ\Bookstore.API\nlog.config
+2026-04-28 14:40:00.6940 Info Loading assembly name: NLog.Web.AspNetCore
+2026-04-28 14:40:00.7014 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. Sistem belirtilen dosyayı bulamıyor.
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String itemNamePrefix)
+   --- End of inner exception stack trace ---
+2026-04-28 14:40:00.7568 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-04-28 14:40:00.7568 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 14:40:00.7568 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-mvc-action' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 14:40:00.7568 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2026-04-28 14:40:00.7621 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=lifetimeConsole)
+2026-04-28 14:40:00.7621 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.1.5033. Product version: 6.1.1+0e83056311dfcda0493d7db60b7191d0927eb5da. GlobalAssemblyCache: False
+2026-04-28 14:40:00.7968 Info Configuration initialized: TargetNames=allfile, ownFile-web, lifetimeConsole, ConfigItems=47, AutoReload=true, FilePath=C:\ASP.Net Core Web Api\YMODEVİ\Bookstore.API\nlog.config
+2026-04-28 14:40:38.9100 Info Loading assembly name: NLog.Web.AspNetCore
+2026-04-28 14:40:38.9171 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. Sistem belirtilen dosyayı bulamıyor.
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String itemNamePrefix)
+   --- End of inner exception stack trace ---
+2026-04-28 14:40:38.9751 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-04-28 14:40:38.9751 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 14:40:38.9751 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-mvc-action' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 14:40:38.9751 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2026-04-28 14:40:38.9809 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=lifetimeConsole)
+2026-04-28 14:40:38.9809 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.1.5033. Product version: 6.1.1+0e83056311dfcda0493d7db60b7191d0927eb5da. GlobalAssemblyCache: False
+2026-04-28 14:40:39.0165 Info Configuration initialized: TargetNames=allfile, ownFile-web, lifetimeConsole, ConfigItems=47, AutoReload=true, FilePath=C:\ASP.Net Core Web Api\YMODEVİ\Bookstore.API\nlog.config
+2026-04-28 14:43:18.5579 Info Loading assembly name: NLog.Web.AspNetCore
+2026-04-28 14:43:18.5666 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. Sistem belirtilen dosyayı bulamıyor.
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String itemNamePrefix)
+   --- End of inner exception stack trace ---
+2026-04-28 14:43:18.6342 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-04-28 14:43:18.6355 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 14:43:18.6355 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-mvc-action' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 14:43:18.6355 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2026-04-28 14:43:18.6355 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=lifetimeConsole)
+2026-04-28 14:43:18.6355 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.1.5033. Product version: 6.1.1+0e83056311dfcda0493d7db60b7191d0927eb5da. GlobalAssemblyCache: False
+2026-04-28 14:43:18.6701 Info Configuration initialized: TargetNames=allfile, ownFile-web, lifetimeConsole, ConfigItems=47, AutoReload=true, FilePath=C:\ASP.Net Core Web Api\YMODEVİ\Bookstore.API\nlog.config
+2026-04-28 14:46:05.8955 Info Loading assembly name: NLog.Web.AspNetCore
+2026-04-28 14:46:05.9031 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. Sistem belirtilen dosyayı bulamıyor.
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String itemNamePrefix)
+   --- End of inner exception stack trace ---
+2026-04-28 14:46:05.9569 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-04-28 14:46:05.9569 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 14:46:05.9569 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-mvc-action' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 14:46:05.9569 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2026-04-28 14:46:05.9569 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=lifetimeConsole)
+2026-04-28 14:46:05.9674 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.1.5033. Product version: 6.1.1+0e83056311dfcda0493d7db60b7191d0927eb5da. GlobalAssemblyCache: False
+2026-04-28 14:46:05.9951 Info Configuration initialized: TargetNames=allfile, ownFile-web, lifetimeConsole, ConfigItems=47, AutoReload=true, FilePath=C:\ASP.Net Core Web Api\YMODEVİ\Bookstore.API\nlog.config
+2026-04-28 15:42:24.5665 Info Loading assembly name: NLog.Web.AspNetCore
+2026-04-28 15:42:24.5824 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. Sistem belirtilen dosyayı bulamıyor.
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String itemNamePrefix)
+   --- End of inner exception stack trace ---
+2026-04-28 15:42:24.6497 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-04-28 15:42:24.6510 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 15:42:24.6510 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-mvc-action' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 15:42:24.6510 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2026-04-28 15:42:24.6510 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=lifetimeConsole)
+2026-04-28 15:42:24.6510 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.1.5033. Product version: 6.1.1+0e83056311dfcda0493d7db60b7191d0927eb5da. GlobalAssemblyCache: False
+2026-04-28 15:42:24.6897 Info Configuration initialized: TargetNames=allfile, ownFile-web, lifetimeConsole, ConfigItems=47, AutoReload=true, FilePath=C:\ASP.Net Core Web Api\YMODEVİ\Bookstore.API\bin\Debug\net10.0\NLog.config
+2026-04-28 15:43:04.0426 Info Loading assembly name: NLog.Web.AspNetCore
+2026-04-28 15:43:04.0426 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. Sistem belirtilen dosyayı bulamıyor.
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String itemNamePrefix)
+   --- End of inner exception stack trace ---
+2026-04-28 15:43:04.0988 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-04-28 15:43:04.0988 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 15:43:04.0988 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-mvc-action' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 15:43:04.0988 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2026-04-28 15:43:04.1044 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=lifetimeConsole)
+2026-04-28 15:43:04.1044 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.1.5033. Product version: 6.1.1+0e83056311dfcda0493d7db60b7191d0927eb5da. GlobalAssemblyCache: False
+2026-04-28 15:43:04.1237 Info Configuration initialized: TargetNames=allfile, ownFile-web, lifetimeConsole, ConfigItems=47, AutoReload=true, FilePath=C:\ASP.Net Core Web Api\YMODEVİ\Bookstore.API\bin\Debug\net10.0\NLog.config
+2026-04-28 15:44:44.3348 Info Loading assembly name: NLog.Web.AspNetCore
+2026-04-28 15:44:44.3422 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Error loading extensions: NLog.Web.AspNetCore
+ ---> System.IO.FileNotFoundException: Could not load file or assembly 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'. Sistem belirtilen dosyayı bulamıyor.
+File name: 'NLog.Web.AspNetCore, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.InternalLoad(AssemblyName assemblyName, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext, RuntimeAssembly requestingAssembly, Boolean throwOnFileNotFound)
+   at System.Reflection.Assembly.Load(String assemblyString)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(String assemblyName)
+   at NLog.Config.AssemblyExtensionLoader.LoadAssemblyFromName(ConfigurationItemFactory factory, String assemblyName, String itemNamePrefix)
+   at NLog.Config.LoggingConfigurationParser.ParseExtensionWithAssemblyName(String assemblyName, String itemNamePrefix)
+   --- End of inner exception stack trace ---
+2026-04-28 15:44:44.3983 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-04-28 15:44:44.3983 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-request-url' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 15:44:44.3983 Warn Error has been raised. Exception: NLog.NLogConfigurationException: Failed to create LayoutRenderer with unknown type-alias: 'aspnet-mvc-action' - Extension NLog.Web.AspNetCore not included?
+   at NLog.Config.FactoryExtensions.CreateInstance[TBaseType](IFactory`1 factory, String typeAlias)
+   at NLog.Layouts.LayoutParser.GetLayoutRenderer(String typeName, ConfigurationItemFactory configurationItemFactory, Nullable`1 throwConfigExceptions)
+2026-04-28 15:44:44.4009 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2026-04-28 15:44:44.4009 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=lifetimeConsole)
+2026-04-28 15:44:44.4009 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.1.5033. Product version: 6.1.1+0e83056311dfcda0493d7db60b7191d0927eb5da. GlobalAssemblyCache: False
+2026-04-28 15:44:44.4323 Info Configuration initialized: TargetNames=allfile, ownFile-web, lifetimeConsole, ConfigItems=47, AutoReload=true, FilePath=C:\ASP.Net Core Web Api\YMODEVİ\Bookstore.API\bin\Debug\net10.0\NLog.config
+2026-04-28 15:49:08.0157 Info Loading assembly name: NLog.Web.AspNetCore
+2026-04-28 15:49:08.1800 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.15.1182. Product version: 5.3.15+9364343ea6995553ea48ce3422101edf9e3a8104. GlobalAssemblyCache: False
+2026-04-28 15:49:08.3995 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-04-28 15:49:08.4009 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2026-04-28 15:49:08.4009 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=lifetimeConsole)
+2026-04-28 15:49:08.4009 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.1.5033. Product version: 6.1.1+0e83056311dfcda0493d7db60b7191d0927eb5da. GlobalAssemblyCache: False
+2026-04-28 15:49:08.4391 Info Configuration initialized: TargetNames=allfile, ownFile-web, lifetimeConsole, ConfigItems=50, AutoReload=true, FilePath=C:\ASP.Net Core Web Api\YMODEVİ\Bookstore.API\bin\Debug\net10.0\NLog.config
+2026-04-28 15:51:05.4104 Info Loading assembly name: NLog.Web.AspNetCore
+2026-04-28 15:51:05.4190 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.15.1182. Product version: 5.3.15+9364343ea6995553ea48ce3422101edf9e3a8104. GlobalAssemblyCache: False
+2026-04-28 15:51:05.4656 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-04-28 15:51:05.4656 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2026-04-28 15:51:05.4656 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=lifetimeConsole)
+2026-04-28 15:51:05.4656 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.1.5033. Product version: 6.1.1+0e83056311dfcda0493d7db60b7191d0927eb5da. GlobalAssemblyCache: False
+2026-04-28 15:51:05.4968 Info Configuration initialized: TargetNames=allfile, ownFile-web, lifetimeConsole, ConfigItems=50, AutoReload=true, FilePath=C:\ASP.Net Core Web Api\YMODEVİ\Bookstore.API\bin\Debug\net10.0\NLog.config
+2026-04-28 15:52:03.5859 Info Loading assembly name: NLog.Web.AspNetCore
+2026-04-28 15:52:03.5951 Info NLog.Web.AspNetCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 5.3.15.1182. Product version: 5.3.15+9364343ea6995553ea48ce3422101edf9e3a8104. GlobalAssemblyCache: False
+2026-04-28 15:52:03.6571 Info Registered target NLog.Targets.FileTarget(Name=allfile)
+2026-04-28 15:52:03.6571 Info Registered target NLog.Targets.FileTarget(Name=ownFile-web)
+2026-04-28 15:52:03.6571 Info Registered target NLog.Targets.ColoredConsoleTarget(Name=lifetimeConsole)
+2026-04-28 15:52:03.6571 Info NLog, Version=6.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 6.1.1.5033. Product version: 6.1.1+0e83056311dfcda0493d7db60b7191d0927eb5da. GlobalAssemblyCache: False
+2026-04-28 15:52:03.6836 Info Configuration initialized: TargetNames=allfile, ownFile-web, lifetimeConsole, ConfigItems=50, AutoReload=true, FilePath=C:\ASP.Net Core Web Api\YMODEVİ\Bookstore.API\bin\Debug\net10.0\NLog.config
